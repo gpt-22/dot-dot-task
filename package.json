@@ -1,0 +1,32 @@
+{
+  "name": "dot-dot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode development --hot",
+    "build": "webpack --mode production"
+  },
+  "browserslist": [
+    "last 2 version"
+  ],
+  "author": "Grigory Tikhomirov",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.4",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.11",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.10",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.34.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
