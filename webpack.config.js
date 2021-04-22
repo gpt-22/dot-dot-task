@@ -3,9 +3,16 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  dist: path.join(__dirname, 'dist')
+}
 
 module.exports = {
+  target: 'web',
+
   mode: 'development',
 
   entry: {
@@ -14,10 +21,10 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: PATHS.dist
   },
 
-  context: path.resolve(__dirname, 'src'),
+  context: PATHS.src,
 
   module: {
     rules: [
@@ -35,6 +42,13 @@ module.exports = {
           'postcss-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]'
+        }
       }
     ]
   },
@@ -42,19 +56,25 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      template: 'index.html',
+      template: `${PATHS.src}/index.html`,
+      filename: './index.html',
       minify: {
         collapseWhitespace: true
       }
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: `${PATHS.src}/fonts`, to: 'fonts' }
+      ]
     })
   ],
 
   devServer: {
     port: 8080,
-    contentBase: path.join(__dirname, 'src'),
+    contentBase: PATHS.src,
     watchContentBase: true,
     hot: true
   }
