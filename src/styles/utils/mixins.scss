@@ -1,0 +1,10 @@
+@mixin responsive-font($init-size, $mobile-size) {
+  $add-size: $init-size - $mobile-size;
+  $add-mobile-size: $add-size + $add-size*0.7;
+  
+  font-size: $init-size + px;
+
+  @media (max-width: 728px) {
+    font-size: calc(#{$mobile-size + px} + #{$add-mobile-size} * ((100vw - 320px) / 728));
+  }
+}

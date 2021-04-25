@@ -1,4 +1,16 @@
-.title {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;  
+}
+
+body {
+  background-color: $c-background;
+  color: $c-font-light;
   font-family: 'Helvetica Neue';
   font-weight: 400;
 }
