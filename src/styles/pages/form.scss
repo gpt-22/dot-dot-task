@@ -106,6 +106,8 @@
 
   &__input {
     appearance: none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
     position: absolute;
 
     &:checked + label::before {
@@ -251,6 +253,7 @@
     width: 100%;
     padding: 12px 14px;
     outline: none;
+    border-radius: 0;
   }
   &__input {
     margin-right: 12px;
