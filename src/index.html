@@ -2,23 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta 
-      name="viewport" 
+    <meta
+      name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     >
-    
+
     <title>Test task</title>
 </head>
 <body>
 
   <main class="container">
-  
+
     <h1 class="title">
       FTL: Прямая машина
     </h1>
 
-    <form action="" class="form">
-      <div class="form-hint">
+    <form action="#" class="form">
+      <div class="form__hint">
         Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
       </div>
 
@@ -31,12 +31,12 @@
 
           <div class="form-block__field">
             <label class="form-block__label" for="from">Откуда</label>
-            <input class="form-block__input" id="from" type="text" autofocus>  
+            <input class="form-block__input" id="from" type="text" autofocus>
           </div>
-          
+
           <div class="form-block__field">
             <label class="form-block__label" for="to">Куда</label>
-            <input class="form-block__input" id="to" type="text">  
+            <input class="form-block__input" id="to" type="text">
           </div>
 
         </div>
@@ -50,8 +50,8 @@
         <div class="form-block__body">
 
           <div class="form-block__field">
-            <label class="form-block__label" for="carrying-capacity">Грузоподъёмность</label>
-            <div class="select" id="carrying-capacity">
+            <label class="form-block__label">Грузоподъёмность</label>
+            <div class="select">
               <div class="select__header">
                 <div class="select__current" data-value="0">Не выбрана</div>
               </div>
@@ -62,12 +62,12 @@
                 <li class="select__item" data-value="4">Вариант 4</li>
                 <li class="select__item" data-value="5">Вариант 5</li>
               </ul>
-            </div>  
+            </div>
           </div>
 
           <div class="form-block__field">
-            <label class="form-block__label" for="booting-method">Способ загрузки</label>
-            <div class="select" id="booting-method">
+            <label class="form-block__label">Способ загрузки</label>
+            <div class="select">
               <div class="select__header">
                 <div class="select__current" data-value="0">Не выбрана</div>
               </div>
@@ -76,7 +76,7 @@
                 <li class="select__item" data-value="2">Способ 2</li>
                 <li class="select__item" data-value="3">Способ 3</li>
               </ul>
-            </div>  
+            </div>
           </div>
 
         </div>
@@ -90,8 +90,8 @@
         <div class="form-block__body">
 
           <div class="form-block__field form-block__field_cargo-type">
-            <label class="form-block__label" for="cargo-type">Тип груза</label>
-            <div class="select" id="cargo-type">
+            <label class="form-block__label">Тип груза</label>
+            <div class="select">
               <div class="select__header">
                 <div class="select__current" data-value="0">Не выбран</div>
               </div>
@@ -104,8 +104,8 @@
           </div>
 
           <div class="form-block__field form-block__field_danger-class">
-            <label class="form-block__label" for="cargo-type">Класс опасности</label>
-            <div class="select" id="cargo-type">
+            <label class="form-block__label">Класс опасности</label>
+            <div class="select">
               <div class="select__header">
                 <div class="select__current" data-value="0">Не выбран</div>
               </div>
@@ -131,11 +131,11 @@
 
           <div class="form-block__field">
             <label class="form-block__label form-block__label_declared-cost" for="declared-cost">Объявленная ценность, ₽</label>
-            <input class="form-block__input" id="declared-cost" type="number" placeholder="≥ 1">  
+            <input class="form-block__input" id="declared-cost" type="number" placeholder="≥ 1">
           </div>
 
           <div class="form-block__field form-block__field_temperature">
-            <input class="form-block__input" id="temperature-regime" type="checkbox" checked>
+            <input class="form-block__input" id="temperature-regime" type="checkbox">
             <label class="form-block__label form-block__label_checkbox" for="temperature-regime"></label>
             <label class="form-block__label form-block__label_text" for="temperature-regime">
               Требуется температурный режим
@@ -144,11 +144,11 @@
             <div class="temperature">
               <div class="form-block__field">
                 <label class="form-block__label" for="start-temperature">От, °C</label>
-                <input class="form-block__input" id="start-temperature" type="number" min="-100" autocomplete="off">  
+                <input class="form-block__input" id="start-temperature" type="number" min="-100" autocomplete="off">
               </div>
               <div class="form-block__field">
                 <label class="form-block__label" for="end-temperature">До, °C</label>
-                <input class="form-block__input" id="end-temperature" type="number" min="-100" autocomplete="off">  
+                <input class="form-block__input" id="end-temperature" type="number" min="-100" autocomplete="off">
               </div>
             </div>
           </div>
@@ -168,24 +168,24 @@
             </label>
             <label class="form-block__label time__label_2" for="address1">
               700 км в день
-            </label>  
+            </label>
           </div>
-            
+
           <div class="radio">
-            <input class="form-block__input radio__input" name="address" id="address1" type="radio" value="1">  
+            <input class="form-block__input radio__input" name="address" id="address1" type="radio" value="1">
             <label class="radio__label" for="address1">
               Длинный адрес с градиентом Длинный адрес с градиентом
-              <button class="radio__label-btn">Не выбрано</button>
             </label>
+            <button class="radio__label-btn">Не выбрано</button>
           </div>
           <div class="radio">
-            <input class="form-block__input radio__input" name="address" id="address2" type="radio" value="2">  
+            <input class="form-block__input radio__input" name="address" id="address2" type="radio" value="2">
             <label class="radio__label" for="address2">
               Адрес не указан
-              <button class="radio__label-btn">Не выбрано</button>
             </label>
+            <button class="radio__label-btn">Не выбрано</button>
           </div>
-          
+
           <div class="form-block__field time__field_comment">
             <label class="form-block__label" for="comment">Комментарий к заказу</label>
             <textarea
@@ -196,7 +196,7 @@
           </div>
         </div>
       </div>
-    </form>    
+    </form>
   </main>
 
 </body>

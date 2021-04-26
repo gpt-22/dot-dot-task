@@ -1,7 +1,9 @@
 @import "./utils/fonts";
 @import "./utils/vars";
 @import "./utils/mixins";
+@import "./utils/default";
 
-@import "./default";
+@import "./components/select.scss";
+@import "./components/radio.scss";
 
 @import "./pages/form";

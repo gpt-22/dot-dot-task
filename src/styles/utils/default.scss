@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: $c-background;
+  color: $c-font-light;
+  font-family: 'Helvetica Neue', serif;
+  font-weight: 400;
+}
+
+input, textarea, label {
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance:none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
