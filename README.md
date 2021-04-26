@@ -1,3 +1,6 @@
+## Ссылка GitHub Pages
+https://incomprehensibleguy.github.io/dot-dot-task/dist/index.html
+
 ## Задание
 Необходимо сделать адаптивную верстку по макету.
 Методология: БЭМ
